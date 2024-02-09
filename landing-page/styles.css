@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+  font-family: roboto, sans-serif;
+}
+
+.header{
+  display: flex;
+  height: 50px;
+  font-family: roboto, sans-serif;
+  background-color: #1f2937;
+  color: #f9faf8;
+  align-items: center;
+}
+
+.logo{
+  margin-right: auto;
+  margin-left: 10%;
+  font-size: 24px;
+}
+
+.header ul{
+  margin: 0;
+  margin-right: 10%;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+}
+
+a{
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.primeira{
+  background-color: #1f2937;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10%;
+  gap: 20px;
+}
+
+.primeira h1{
+  font-size: 48px;
+  font-weight: extra-bold;
+  color: #f9faf8;
+}
+
+.primeira div{
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+.primeira input{
+  background-color: #3882f6;
+  color: white;
+  border-radius: 12px;
+  width: 30%;
+  padding: 5px;
+}
+
+.texto{
+  max-width: 40%;
+}
+
+.imagem{
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 18px;
+  width: 480px;
+  height: 240px;
+}
+
+.imagem div{
+  color: black;
+}
+
+.segunda{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+.segunda_header{
+  font-size: 36px;
+  font-weight: extra-bold;
+  font-color: #1f2937;
+  margin: 40px;
+}
+
+.ilustracoes{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10%;
+}
+
+.ilus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ilustracao{
+  border: 4px solid #3882f6;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+}
+
+.ilus div{
+  height: 100px;
+  width: 100px;
+}
+
+.terceira{
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e7eb;
+  justify-content: center;
+  padding: 10%;
+}
+
+.citacao{
+  color: #1f2937;
+  font-size: 36px;
+  font-weight: light;
+  font-style: italic;
+  align-self: center;
+  width: 70%;
+}
+
+.autor{
+  font-size: 18px;
+  font-weight: bold;
+  align-self: flex-end;
+  padding-right: 20%
+}
+
+.quarta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  background-color: #3882f6;
+  border-radius: 12px;
+  margin: 10%;
+}
+
+.quarta_texto{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.quarta_titulo{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.quarta_frase{
+  font-size: 18px;
+}
+
+.quarta input{
+  background-color: #3882f6;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding-right: 3%;
+  padding-left: 3%;
+  margin-right: 5%;
+  color: white;
+}
+
+.rodape{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937;
+  padding: 5%;
+}
+
+.assinatura{
+  font-weight: bold;
+  font-size: 18px;
+  color: #e5e7eb;
+}
