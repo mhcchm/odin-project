@@ -9,9 +9,27 @@ function createGrid(quantity, size){
       const newDiv = document.createElement('div');
       newDiv.style.minHeight = size + 'px';
       newDiv.style.minWidth = size + 'px';
+      
+      // Extra credit 2
+      // control the blackness of the element
+      let color=0;
 
       newDiv.addEventListener("mouseenter", function(e){
         newDiv.style.backgroundColor = 'black';
+        
+        // Extra credit 1
+        // make the color random
+        //let r=Math.round(Math.random() * 256), g=Math.round(Math.random() * 256), b=Math.round(Math.random() * 256);
+        //newDiv.style.backgroundColor = "rgb("+ r +", " + g + ", " + b + ")";
+        
+        //Extra credit 2
+        // make the color of the square increasingly black and it doesn't get cleared
+        // for this it is necessary to comment the mouseleave event listener
+        // each time the square interacts with the mouse the color is increased from one to ten
+        // and the background color of the square can be calculated by 255 - (color/10)*255 for each red, blue, green
+        //let newColor = (255 - (color/10)*255);
+        //newDiv.style.backgroundColor = "rgb(" + newColor + ", " + newColor + ", " + newColor + ")";
+        //color++;
       });
 
       newDiv.addEventListener("mouseleave", function(e){
