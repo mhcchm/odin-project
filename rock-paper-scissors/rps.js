@@ -96,3 +96,47 @@ function playGame(){
     console.log(`Your game against the computer ended with a draw with ${resP} points each.`);
   }
 }
+
+
+function round(playerChoice, computerChoice, scorePlayer, scoreComputer){
+  let res = playRound(playerChoice, computerChoice);
+  if(res == 0){
+    scorePlayer += 1;
+  }else if(res == 1){
+    scoreComputer += 1;
+  }
+  return [scorePlayer, scoreComputer];
+}
+
+const botoes = document.querySelector(".botoes");
+const resultados = document.querySelector(".results");
+const fim = document.querySelector(".fim");
+let scorePlayer=0, scoreComputer=0;
+
+function jogar(e){
+  let computerChoice = getComputerChoice();
+  if(scorePlayer < 5 && scoreComputer < 5){
+    switch (e.target.attributes.class.value){
+      case "rock":
+        [scorePlayer, scoreComputer] = round("rock", computerChoice, scorePlayer, scoreComputer);
+        break;
+      case "paper":
+        [scorePlayer, scoreComputer] = round("paper", computerChoice, scorePlayer, scoreComputer);
+        break;
+      case "scissors":
+        [scorePlayer, scoreComputer] = round("scissors", computerChoice, scorePlayer, scoreComputer);
+    }
+
+  }else{
+    if(scorePlayer >= 5){
+      fim.textContent = "Congratulations! You won!";
+    }else{
+      fim.textContent = "The Computer won. Better luck next time.";
+    }
+  }
+  resultados.textContent = `Player Score: ${scorePlayer}\nComputer Score: ${scoreComputer}`;
+}
+
+console.log(fim);
+
+botoes.addEventListener("click", jogar);
