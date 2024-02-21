@@ -5,3 +5,10 @@
   border: 1px solid black;
   flex-wrap: wrap;
 }
+
+.botao{
+  background-color: red;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
