@@ -8,6 +8,16 @@ for(let i=0;i<divNumber;i++){
     const newDiv = document.createElement('div');
     newDiv.style.minHeight = elementSize + 'px';
     newDiv.style.minWidth = elementSize + 'px';
+
+    newDiv.addEventListener("mouseenter", function(e){
+      newDiv.style.backgroundColor = 'black';
+    });
+
+    newDiv.addEventListener("mouseleave", function(e){
+      setTimeout(function(){newDiv.style.backgroundColor = 'white';}, 1000);
+    });
+
+
     grid.appendChild(newDiv);
   }
 }
