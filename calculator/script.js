@@ -30,23 +30,22 @@ let caracteres = {
 tela.textContent = '';
 
 numericos.addEventListener("click", function(e){
-  console.log(e.target.attributes.class.value);
-  if(tela.textContent.length < 36 && e.target.attributes.class.value === "num"){
+  if(tela.textContent.length < 36 && (e.target.attributes.class.value === "num" || e.target.attributes.class.value === "num zero")){
     tela.textContent = tela.textContent + e.target.textContent;
   }
 });
 
 operacoes.addEventListener("click", function(e){
-  if(tela.textContent.length < 36){
-    tela.textContent = tela.textContent + e.target.textContent;
-  }
   if(e.target.textContent == "="){
-    //operacao();
+    operacao();
     console.log("gerando resultado da expressao");
+  }else if(tela.textContent.length < 36){
+    tela.textContent = tela.textContent + " " + e.target.textContent + " ";
   }
 });
 
 function operacao(){
-  let separados = tela.textContent.split(/[+-*/]/g)
+  let separados = tela.textContent.split(" ");
   separados.forEach((num) => console.log(num));
+  tela.textContent = '';
 }
