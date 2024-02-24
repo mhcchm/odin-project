@@ -17,6 +17,7 @@ body{
   flex-direction: column;
   width: 800px;
   background-color: #d3d3d3; /*light gray*/
+  border: 2px solid black;
 }
 
 .tela{
@@ -32,6 +33,7 @@ body{
 .botoes{
   display: flex;
   height: 100%;
+  justify-content: center;
 }
 
 .num{
@@ -40,10 +42,11 @@ body{
   padding: 10px;
   font-family: serif;
   font-size: 18px;
+  background-color: #faebd7;
 }
 
 .num.zero{
-  width: 93%;
+  width: 61%;
 }
 
 .operacoes{
@@ -58,4 +61,5 @@ body{
   padding: 10px;
   font-family: serif;
   font-size: 18px;
+  background-color: #00ffff;
 }
